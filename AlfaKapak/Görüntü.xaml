@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:AlfaKapak"
         mc:Ignorable="d"
         Title="Görüntü" Height="1080" Width="1080">
-    <Grid>
+    <Grid x:Name="AnaGrid">
         <Image HorizontalAlignment="Center" Margin="0,-16,0,0" Width="1080" Height="1080" VerticalAlignment="Top" Source="/Alfa Home Şablon.png"/>
         <Image x:Name="BgImage" Stretch="Fill" HorizontalAlignment="Center" Height="612" Margin="0,-16,0,0" VerticalAlignment="Top" Width="1080"/>
+        <Border Background="#000000" Opacity="0.5" Height="614" Margin="0,-16,0,0" VerticalAlignment="Top" Width="1080"/>
         <Image HorizontalAlignment="Center" Margin="0,-16,0,0" Width="1080" Height="1080" VerticalAlignment="Top" Source="/Alfa Home Şablon2.png"/>
         <Image HorizontalAlignment="Center" Margin="0,-16,0,0" Width="1080" Height="1080" VerticalAlignment="Top" Source="/Alfa Home Şablon1.png" />
         <Image x:Name="SmallImage1" Stretch="Fill" HorizontalAlignment="Left" Height="278" Margin="423,425,0,0" VerticalAlignment="Top" Width="607"/>

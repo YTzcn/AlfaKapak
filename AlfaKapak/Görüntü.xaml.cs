@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,6 +21,7 @@ namespace AlfaKapak
     /// </summary>
     public partial class Görüntü : Window
     {
+        public bool check = false;
         public Görüntü(ImagesClass ımages)
         {
 
@@ -55,8 +58,46 @@ namespace AlfaKapak
                 itemStackPanel.Children.Add(label);
 
                 labelStackPanel.Children.Add(itemStackPanel);
+                this.Loaded += Görüntü_Loaded;
+
+            }
+        }
+        private void Görüntü_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (check == false)
+            {
+                SaveScreenshot();
+                this.Close();
+                check = true;
             }
 
         }
+        private void SaveScreenshot()
+        {
+            // Görüntüyü yakalamak için kullanılacak UIElement'i seçin.
+            UIElement elementToCapture = AnaGrid; // Bu, Görüntü penceresi
+
+            RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap(
+                (int)elementToCapture.RenderSize.Width,
+                (int)elementToCapture.RenderSize.Height,
+                96, 96, PixelFormats.Pbgra32);
+
+            renderTargetBitmap.Render(elementToCapture);
+
+            PngBitmapEncoder encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+
+            // Masaüstü yolu ve dosya adını belirleme
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string fileName = System.IO.Path.Combine(desktopPath, $"AlfaKapak_{DateTime.Now.ToString("yyyyMMddHHmmss")}.png");
+
+            using (FileStream fileStream = new FileStream(fileName, FileMode.Create))
+            {
+                encoder.Save(fileStream);
+            }
+
+            MessageBox.Show($"Ekran görüntüsü masaüstüne kaydedildi: {fileName}");
+        }
+
     }
 }

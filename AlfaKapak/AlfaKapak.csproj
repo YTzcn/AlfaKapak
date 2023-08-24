@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Alfa Home Şablon Son.png" />
     <None Remove="Alfa Home Şablon.png" />
     <None Remove="Alfa Home Şablon1.png" />
     <None Remove="Alfa Home Şablon2.png" />
@@ -15,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Alfa Home Şablon Son.png" />
     <Resource Include="Alfa Home Şablon.png" />
     <Resource Include="Alfa Home Şablon1.png" />
     <Resource Include="Alfa Home Şablon2.png" />
