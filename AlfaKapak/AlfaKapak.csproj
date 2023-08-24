@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Alfa Home Şablon.png" />
+    <None Remove="Alfa Home Şablon1.png" />
+    <None Remove="Alfa Home Şablon2.png" />
+    <None Remove="TickIcon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Alfa Home Şablon.png" />
+    <Resource Include="Alfa Home Şablon1.png" />
+    <Resource Include="Alfa Home Şablon2.png" />
+    <Resource Include="TickIcon.png" />
+  </ItemGroup>
+
+</Project>

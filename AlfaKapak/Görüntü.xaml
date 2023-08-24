@@ -1,0 +1,41 @@
+﻿<Window x:Class="AlfaKapak.Görüntü"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlfaKapak"
+        mc:Ignorable="d"
+        Title="Görüntü" Height="1080" Width="1080">
+    <Grid>
+        <Image HorizontalAlignment="Center" Margin="0,-16,0,0" Width="1080" Height="1080" VerticalAlignment="Top" Source="/Alfa Home Şablon.png"/>
+        <Image x:Name="BgImage" Stretch="Fill" HorizontalAlignment="Center" Height="612" Margin="0,-16,0,0" VerticalAlignment="Top" Width="1080"/>
+        <Image HorizontalAlignment="Center" Margin="0,-16,0,0" Width="1080" Height="1080" VerticalAlignment="Top" Source="/Alfa Home Şablon2.png"/>
+        <Image HorizontalAlignment="Center" Margin="0,-16,0,0" Width="1080" Height="1080" VerticalAlignment="Top" Source="/Alfa Home Şablon1.png" />
+        <Image x:Name="SmallImage1" Stretch="Fill" HorizontalAlignment="Left" Height="278" Margin="423,425,0,0" VerticalAlignment="Top" Width="607"/>
+        <Image x:Name="SmallImage2" Stretch="Fill" HorizontalAlignment="Left" Height="277" Margin="422,748,0,0" VerticalAlignment="Top" Width="607"/>
+        <StackPanel x:Name="labelStackPanel" Margin="43,678,680,159">
+
+        </StackPanel>
+        <Label Content="" 
+               x:Name="MainTitle"
+       HorizontalAlignment="Center" 
+       VerticalAlignment="Top" 
+       Height="167"
+       Padding="10"
+       FontFamily="Bebas Neue" 
+       FontSize="144"
+       Foreground="#FFC828" Margin="0,181,0,0" RenderTransformOrigin="0.5,0.5" />
+        <Label Content="" 
+        x:Name="LittleTitle"
+HorizontalAlignment="Center" 
+VerticalAlignment="Top" 
+Height="167"
+Padding="10"
+FontFamily="Bebas Neue" 
+FontSize="104"
+Foreground="#ffffff" Margin="0,77,0,0" RenderTransformOrigin="0.5,0.5" />
+
+
+
+    </Grid>
+</Window>
