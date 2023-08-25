@@ -35,6 +35,7 @@ namespace AlfaKapak
 
         private void btnBgImage_Click(object sender, RoutedEventArgs e)
         {
+            //height 752 widh : 747
             imagesClass.BgPath = OpenFileDialog();
             if (!string.IsNullOrEmpty(imagesClass.BgPath))
             {
@@ -49,7 +50,7 @@ namespace AlfaKapak
         private void btnSmall1_Click(object sender, RoutedEventArgs e)
         {
             imagesClass.SmallPath1 = OpenFileDialog();
-            if (!string.IsNullOrEmpty(imagesClass.BgPath))
+            if (!string.IsNullOrEmpty(imagesClass.SmallPath1))
             {
                 btnSmall1.Background = Brushes.Green;
             }
@@ -62,7 +63,7 @@ namespace AlfaKapak
         private void btnSmall2_Click(object sender, RoutedEventArgs e)
         {
             imagesClass.SmallPath2 = OpenFileDialog();
-            if (!string.IsNullOrEmpty(imagesClass.BgPath))
+            if (!string.IsNullOrEmpty(imagesClass.SmallPath2))
             {
                 btnSmall2.Background = Brushes.Green;
             }

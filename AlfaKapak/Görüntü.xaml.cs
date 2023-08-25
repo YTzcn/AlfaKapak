@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -62,19 +63,24 @@ namespace AlfaKapak
 
             }
         }
+
+
         private void Görüntü_Loaded(object sender, RoutedEventArgs e)
         {
             if (check == false)
             {
                 SaveScreenshot();
-                this.Close();
                 check = true;
+                this.Close();
             }
 
         }
         private void SaveScreenshot()
         {
             // Görüntüyü yakalamak için kullanılacak UIElement'i seçin.
+            var renderTarget = new RenderTargetBitmap(1080, 1080, 96, 96, PixelFormats.Pbgra32);
+            renderTarget.Render(AnaGrid);
+
             UIElement elementToCapture = AnaGrid; // Bu, Görüntü penceresi
 
             RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap(
@@ -85,7 +91,7 @@ namespace AlfaKapak
             renderTargetBitmap.Render(elementToCapture);
 
             PngBitmapEncoder encoder = new PngBitmapEncoder();
-            encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+            encoder.Frames.Add(BitmapFrame.Create(renderTarget));
 
             // Masaüstü yolu ve dosya adını belirleme
             string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);

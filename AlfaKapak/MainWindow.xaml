@@ -5,36 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AlfaKapak"
         mc:Ignorable="d"
-        Title="Hazırlama Ekranı" Height="1080" Width="1080">
-    <Grid Margin="0,0,-280,-189" UseLayoutRounding="False" MinWidth="1080" MinHeight="1081" RenderTransformOrigin="0.5,0.5">
-        <Grid.RenderTransform>
-            <TransformGroup>
-                <ScaleTransform/>
-                <SkewTransform/>
-                <RotateTransform Angle="-0.102"/>
-                <TranslateTransform/>
-            </TransformGroup>
-        </Grid.RenderTransform>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-        </Grid.ColumnDefinitions>
-        <Image HorizontalAlignment="Left" Height="1080" Margin="1,-3,0,0" VerticalAlignment="Top" Width="1080" Source="/Alfa Home Şablon Son.png"/>
-        <Button x:Name="btnBgImage" Content="Arkaplan Resim
-                " HorizontalAlignment="Left" Margin="415,39,0,0" VerticalAlignment="Top" Width="302" Click="btnBgImage_Click" Height="119" FontSize="36"/>
-        <Button x:Name="btnHazirla" Content="Hazırla" HorizontalAlignment="Left" Margin="48,909,0,0" VerticalAlignment="Top" Width="325" Click="btnHazirla_Click" Height="109"/>
-        <Button x:Name="btnSmall2" Content="Küçük 2" HorizontalAlignment="Left" Margin="415,773,0,0" VerticalAlignment="Top" Width="597" Click="btnSmall2_Click" Height="267" Background="#FFBFBFBF"/>
-        <Button x:Name="btnSmall1" Content="Küçük 1" HorizontalAlignment="Left" Margin="414,475,0,0" VerticalAlignment="Top" Width="592" Click="btnSmall1_Click" Height="267" Background="#FFBFBFBF"/>
-        <Button x:Name="btnAddFeatures" Content="Özellikleri Ekle" HorizontalAlignment="Left" Margin="215,718,0,0" VerticalAlignment="Top" Width="150" Click="btnAddFeatures_Click"/>
-        <ListBox x:Name="lbxFeatures" Margin="45,749,696,348"/>
-        <TextBox x:Name="tbxFeatureAdd" HorizontalAlignment="Left" Margin="46,722,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
-        <Button x:Name="btnRemoveFeature" Content="ÖzellikKaldır" HorizontalAlignment="Left" Margin="217,691,0,0" VerticalAlignment="Top" Width="147" Click="btnRemoveFeature_Click"/>
-        <TextBox x:Name="tbxMainTitle" HorizontalAlignment="Left" Margin="455,273,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="254" Height="71" FontSize="20"/>
-        <TextBox x:Name="tbxLittleTitle" HorizontalAlignment="Left" Margin="476,190,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="197" Height="71" FontSize="26"/>
-        <TextBox Visibility="Hidden" Name="tbxMainTitle_Kopyala" TextChanged="tbxMainTitle_Kopyala_TextChanged" />
-        <Label Content="Ana Başlık:" HorizontalAlignment="Left" Margin="301,279,0,0" VerticalAlignment="Top" FontSize="26"/>
-        <Label Content="Küçük Başlık" HorizontalAlignment="Left" Margin="300,205,0,0" VerticalAlignment="Top" FontSize="26"/>
-        <Label Content="Özellik Ekle:" HorizontalAlignment="Left" Margin="46,694,0,0" VerticalAlignment="Top"/>
+        Title="Hazırlama Ekranı" Height="752" Width="747">
+    <ScrollViewer>
+        <Grid Margin="0,0,-280,-189" UseLayoutRounding="False" MinWidth="837" MinHeight="713" RenderTransformOrigin="0.5,0.5" Height="1246" Width="1334">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.102"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Image HorizontalAlignment="Left" Height="713" VerticalAlignment="Top" Width="837" Source="/Alfa Home Şablon Son.png" Margin="3,1,0,0"/>
+            <Button x:Name="btnBgImage" Content="Arkaplan Resim
+                " HorizontalAlignment="Left" Margin="322,25,0,0" VerticalAlignment="Top" Width="234" Click="btnBgImage_Click" Height="78" FontSize="26"/>
+            <Button x:Name="btnHazirla" Content="Hazırla" HorizontalAlignment="Left" Margin="18,603,0,0" VerticalAlignment="Top" Width="252" Click="btnHazirla_Click" Height="72"/>
+            <Button x:Name="btnSmall2" Content="Küçük 2" HorizontalAlignment="Left" Margin="279,515,0,0" VerticalAlignment="Top" Width="400" Click="btnSmall2_Click" Height="176" Background="#FFBFBFBF"/>
+            <Button x:Name="btnSmall1" Content="Küçük 1" HorizontalAlignment="Left" Margin="278,318,0,0" VerticalAlignment="Top" Width="398" Click="btnSmall1_Click" Height="176" Background="#FFBFBFBF"/>
+            <Button x:Name="btnAddFeatures" Content="Özellikleri Ekle" HorizontalAlignment="Left" Margin="155,456,0,0" VerticalAlignment="Top" Width="116" Click="btnAddFeatures_Click" Height="27"/>
+            <ListBox x:Name="lbxFeatures" Margin="35,494,585,656"/>
+            <TextBox x:Name="tbxFeatureAdd" HorizontalAlignment="Left" Margin="36,465,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" Height="23"/>
+            <Button x:Name="btnRemoveFeature" Content="ÖzellikKaldır" HorizontalAlignment="Left" Margin="155,422,0,0" VerticalAlignment="Top" Width="114" Click="btnRemoveFeature_Click" Height="29"/>
+            <TextBox x:Name="tbxMainTitle" HorizontalAlignment="Left" Margin="353,179,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="196" Height="47" FontSize="20"/>
+            <TextBox x:Name="tbxLittleTitle" HorizontalAlignment="Left" Margin="369,124,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="153" Height="47" FontSize="26"/>
+            <TextBox Visibility="Hidden" Name="tbxMainTitle_Kopyala" TextChanged="tbxMainTitle_Kopyala_TextChanged" Margin="0,-1,243,426" />
+            <Label Content="Ana Başlık:" HorizontalAlignment="Left" Margin="233,183,0,0" VerticalAlignment="Top" FontSize="16" Height="30" Width="103"/>
+            <Label Content="Küçük Başlık" HorizontalAlignment="Left" Margin="232,134,0,0" VerticalAlignment="Top" FontSize="16" Height="30" Width="118"/>
+            <Label Content="Özellik Ekle:" HorizontalAlignment="Left" Margin="31,446,0,0" VerticalAlignment="Top" Height="32" Width="89"/>
 
 
-    </Grid>
+        </Grid>
+    </ScrollViewer>
 </Window>
