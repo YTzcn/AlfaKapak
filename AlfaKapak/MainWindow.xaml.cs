@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using Microsoft.Win32;
 
 namespace AlfaKapak
@@ -35,16 +36,40 @@ namespace AlfaKapak
         private void btnBgImage_Click(object sender, RoutedEventArgs e)
         {
             imagesClass.BgPath = OpenFileDialog();
+            if (!string.IsNullOrEmpty(imagesClass.BgPath))
+            {
+                btnBgImage.Background = Brushes.Green;
+            }
+            else
+            {
+                btnBgImage.Background = Brushes.Red;
+            }
         }
 
         private void btnSmall1_Click(object sender, RoutedEventArgs e)
         {
             imagesClass.SmallPath1 = OpenFileDialog();
+            if (!string.IsNullOrEmpty(imagesClass.BgPath))
+            {
+                btnSmall1.Background = Brushes.Green;
+            }
+            else
+            {
+                btnSmall1.Background = Brushes.Red;
+            }
         }
 
         private void btnSmall2_Click(object sender, RoutedEventArgs e)
         {
             imagesClass.SmallPath2 = OpenFileDialog();
+            if (!string.IsNullOrEmpty(imagesClass.BgPath))
+            {
+                btnSmall2.Background = Brushes.Green;
+            }
+            else
+            {
+                btnSmall2.Background = Brushes.Red;
+            }
         }
 
         private void btnAddFeatures_Click(object sender, RoutedEventArgs e)
